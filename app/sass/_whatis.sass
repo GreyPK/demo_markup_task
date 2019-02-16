@@ -1,0 +1,71 @@
+.whatis
+	box-sizing: border-box	
+	background-color: #fafaff
+	background: url('../img/decor.png') no-repeat bottom right
+
+	&__container
+		max-width: 1300px
+		padding: 0 30px
+		margin: 0 auto
+		padding-top: 140px
+		display: flex
+		justify-content: center
+		flex-wrap: wrap
+		align-items: center
+		padding-bottom: 80px
+
+	&__content
+		width: 570px
+		margin: 0 40px
+
+	&__title
+		color: #60759d
+		font-size: 36px
+		font-weight: 500
+		line-height: 54px
+		margin-bottom: 30px
+		margin-top: 0
+
+	&__text
+		color: #60759d
+		font-size: 16px
+		font-weight: 500
+		line-height: 24px
+
+	&__ul
+		list-style: none
+		padding: 0
+		margin-bottom: 40px
+
+	&__list-item
+		display: block
+		color: #60759d
+		font-size: 16px
+		font-weight: 500
+		line-height: 24px
+		margin-bottom: 16px
+
+		&::before
+			content: ''
+			display: inline-block
+			width: 5px
+			height: 5px
+			border: 1px solid #16afe0
+			background-color: #16afe0
+			border-radius: 50%
+			margin-right: 10px
+			vertical-align: middle
+
+
+@media only screen and (max-width : 768px)	
+	.whatis__container
+		padding-top: 60px
+
+	.whatis__content
+		margin: 0 20px
+
+	.whatis__img
+		display: none
+
+	.whatis__title
+		font-size: 30px

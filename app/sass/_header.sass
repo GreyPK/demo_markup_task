@@ -1,0 +1,146 @@
+.header
+	box-sizing: border-box
+	max-width: 1300px
+	padding: 0 30px
+	margin: 0 auto
+	padding-top: 30px
+	color: #fff
+	display: flex
+	align-items: center
+	justify-content: space-between
+	margin-bottom: 120px
+
+	&__home
+		position: relative
+		z-index: 11
+
+	&__nav
+
+	&__ul
+		list-style: none
+		padding: 0
+		display: flex
+		justify-content: space-between	
+		width: 760px
+		max-width: 100%
+		align-items: center		
+		transition: all .3s ease
+	&__li
+
+
+	
+	&__a
+		color: #fff
+		text-decoration: none
+		color: #fdfffc
+		font-family: "Cera Round Pro"
+		font-size: 16px
+		font-weight: 700
+		position: relative
+
+		&:hover::after, &--active 
+			position: absolute
+			opacity: 1
+			bottom: -10px
+			left: 50%
+			content: ''
+			width: 4px
+			height: 4px
+			background-color: #fafbfd
+			border-radius: 50%
+	
+	&__btn
+		color: #fdfffc
+		font-family: "Cera Round Pro"
+		font-size: 16px
+		font-weight: 700
+		background: transparent
+		cursor: pointer
+		padding: 18px 30px
+		border-radius: 30px
+		border: 2px solid #5489c3
+		transition: all .3s ease
+
+		&:hover
+			background-color: #5489c3
+
+	.navbar-checkbox
+		display: none
+
+	.navbar-handle
+		display: none
+		border-top: 3px solid #fff
+		cursor: pointer
+		position: relative
+		width: 32px
+		padding: 10px 0
+		height: 0
+		transform: rotate(0deg)
+		transition: .3s ease-in-out
+
+		&:before, &:after
+			position: absolute
+			left: 0
+			right: 0
+			content: ' '
+			border-top: 3px solid #fff		
+
+		&:before
+			top: 7px			
+
+		&:after
+			top: 17px
+			transform: rotate(0deg)
+			transition: .3s ease-in-out
+
+@media only screen and (max-width : 1100px)
+	.top
+		padding: 0px 10px
+
+	.header .navbar-handle
+		display: block
+		z-index: 11
+
+	.header .header__ul
+		flex-direction: column
+		position: absolute	
+		width: 100%
+		top: -100vh
+		left: 0
+		transition: all .3s ease
+
+	#navbar-checkbox:checked + .header__nav 
+		.header__nav
+			display: block
+		.header__ul
+			background: #2f79b3
+			width: 100%
+			top: 0
+			left: 0
+			z-index: 10
+			margin: 0
+			padding-top: 75px
+			padding-bottom: 20px
+		li 
+			padding: 10px
+		
+		.navbar-handle 
+			&, &:after, &:before 
+				// border-color: #1db4e4
+			&
+				transform: rotate(45deg)
+				top: 7px
+				
+			&:before
+				display: none
+			&:after
+				transform: rotate(90deg)
+				top: -2px
+
+@media only screen and (max-width : 768px)
+	.header
+		margin-bottom: 50px
+	.top__title
+		font-size: 30px
+	.top__subtitle
+		font-size: 18px
